@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Geometry Dash Top 10 Demon List</title>
+  <title>Adel Demon List</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Geometry Dash Top 10 Demon List</h1>
+  <h1>ADEL DEMON LIST</h1>
 
   <div class="tabs">
     <button id="verified-tab">Verified Demons</button>
@@ -15,7 +15,6 @@
     <button id="players-tab">Top Players</button>
   </div>
 
-  <!-- This link only shows when Players tab is selected -->
   <div id="help-link" style="text-align:center; margin-top:20px; display:none;">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5nEeucqQYdsisziQ2YThCQkFmvCL1eLgPM2RGIEjblh3v0Q/viewform?usp=publish-editor" target="_blank" style="color:#0af; text-decoration:underline;">
       Help fill the Top 10 Players list!
@@ -23,6 +22,17 @@
   </div>
 
   <div id="demon-list"></div>
+
+  <!-- MODAL FOR DEMON STATS -->
+  <div id="stats-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2 id="modal-name"></h2>
+      <img id="modal-image" src="" alt="" style="width:100%; max-height:200px; object-fit:cover; border-radius:8px; margin-bottom:10px;">
+      <div id="modal-info"></div>
+      <a id="modal-link" href="#" target="_blank" style="color:#0af; text-decoration:underline;">Play/Watch Level</a>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

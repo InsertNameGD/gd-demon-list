@@ -1,72 +1,121 @@
-/* ===== STABLE BASE CSS ===== */
-/* Only edit for visuals, not logic */
+* {
+  box-sizing: border-box;
+}
 
-/* Body & text */
 body {
-  background-color: #000000; /* Black background */
-  color: #ffffff;            /* White text */
-  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #1e2a3a, #0b0f17);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  padding: 20px;
 }
 
 h1 {
   text-align: center;
+  margin: 25px 0 15px;
+  font-size: 1.8em;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
   margin-bottom: 20px;
 }
 
-/* Tabs */
 .tabs button {
-  padding: 10px 20px;
-  margin-right: 5px;
-  cursor: pointer;
-  background-color: #333;
-  color: white;
+  background-color: #1c2635;
+  color: #cfd8e3;
   border: none;
-  border-radius: 5px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
 }
 
 .tabs button:hover {
-  background-color: #555;
+  background-color: #253349;
 }
 
-/* Demon / Player box */
+#demon-list {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 10px;
+}
+
 .demon-content {
   display: flex;
-  align-items: flex-start;       
-  background: #111111;
-  border-left: 5px solid red;
-  padding: 10px;
-  margin-bottom: 10px;
-  gap: 15px;                     
-  transition: background-color 0.2s;
+  align-items: center;
+  gap: 15px;
+  background-color: #1c2635;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .demon-content:hover {
-  background-color: #222;       
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
 }
 
-/* Text container */
+.demon-image {
+  width: 120px;
+  height: 70px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: #000;
+}
+
 .demon-text {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  word-break: break-word;
+  justify-content: center;
 }
 
-/* Rank, name, info */
 .rank {
+  color: #6fb6ff;
   font-weight: bold;
-  margin-bottom: 3px;
+  font-size: 0.9em;
 }
 
 .name {
-  font-size: 1.2em;
+  font-size: 1.25em;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin: 2px 0;
 }
 
 .info {
-  font-size: 0.9em;
-  color: #ccc;
+  font-size: 0.85em;
+  color: #b0bdd0;
+}
+
+/* MODAL STYLES */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.75);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1c2635;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
 }
